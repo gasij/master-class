@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neon Tower Defense</title>
+  <link rel="stylesheet" href="neon_tower_defense.css">
+</head>
+<body>
+  <div id="game-root">
+    <h2 class="sr-only">Neon Tower Defense — игра в жанре Tower Defense с неоновой графикой</h2>
+    <div id="hud">
+      <div class="hud-stat">HP <span class="hud-val hp" id="h-hp">20</span></div>
+      <div class="hud-stat">Золото <span class="hud-val gold" id="h-gold">150</span></div>
+      <div class="hud-stat">Волна <span class="hud-val wave" id="h-wave">0</span></div>
+      <div class="hud-stat">Счёт <span class="hud-val score" id="h-score">0</span></div>
+      <div class="hud-stat" style="margin-left:auto; font-size:11px; color:#555;">ПКМ = продать башню</div>
+    </div>
+    <div id="canvas-wrap">
+      <canvas id="gc" width="620" height="360"></canvas>
+      <div id="msg-overlay">
+        <div id="msg-title">NEON DEFENSE</div>
+        <div id="msg-sub">Ставь башни на клетки, враги идут по пути</div>
+        <button id="start-btn">▶ НАЧАТЬ</button>
+      </div>
+    </div>
+    <div id="tower-bar">
+      <button class="tower-btn selected" data-type="basic">
+        <span class="tname">Базовая</span>
+        <span class="tcost">50G</span>
+      </button>
+      <button class="tower-btn" data-type="sniper">
+        <span class="tname">Снайпер</span>
+        <span class="tcost">80G</span>
+      </button>
+      <button class="tower-btn" data-type="laser">
+        <span class="tname">Лазер</span>
+        <span class="tcost">120G</span>
+      </button>
+      <button class="tower-btn" data-type="splash">
+        <span class="tname">Взрыв</span>
+        <span class="tcost">100G</span>
+      </button>
+    </div>
+    <div class="sell-tip">Правый клик по башне — продать за половину стоимости</div>
+  </div>
+  <script src="neon_tower_defense.js"></script>
+</body>
+</html>
