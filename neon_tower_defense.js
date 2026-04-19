@@ -189,13 +189,11 @@
     }
 
     // Wave management
-    function startWave() {
-        wave++;
-        enemiesLeft = 5 + wave * 3;
-        waveActive = true;
-        spawnTimer = 0;
-        updateHUD();
-    }
+
+
+
+
+    
 
     function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
 
@@ -303,21 +301,12 @@
         });
 
         // Kill enemies
-        enemies.forEach(e => {
-            if (e.hp <= 0 && !e.dead) {
-                e.dead = true;
-                gold += e.reward;
-                score += e.reward * 2;
-                makeParticle(e.x, e.y, e.color, 10);
-                updateHUD();
-            }
-            if (e.leaked) {
-                hp--;
-                if (hp <= 0) { hp = 0;
-                    gameState = 'over'; }
-                updateHUD();
-            }
-        });
+
+
+
+
+
+        
 
         enemies = enemies.filter(e => !e.dead);
         bullets = bullets.filter(b => !b.dead);
